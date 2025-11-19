@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "local-appsec-toolbox"
+version = "0.1.0"
+description = "Local-only, multi-scanner AppSec command-line tool for security engineering practice and safe local scanning workflows"
+authors = ["jdmansec <jdmansec@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "appsec_toolbox"}]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+
+[tool.poetry.group.dev.dependencies]
+
+[tool.poetry.scripts]
+local-appsec-toolbox = "appsec_toolbox.cli:main"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
